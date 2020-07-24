@@ -11,7 +11,7 @@ app: echo "Use Procfile.static or uncomment this file and help us get Hot Reload
 # hot-assets: sh -c 'rm -rf public/webpack/development || true && bundle exec rake react_on_rails:locale && HOT_RAILS_PORT=3500 yarn run hot-assets'
 
 # Render static client assets
-# rails-static-client-assets: sh -c 'yarn run build:dev:client'
+# rails-static-client-assets: sh -c 'yarn run build:dev'
 
 # Render static client assets. Remove if not server rendering
-# rails-static-server-assets: sh -c 'yarn run build:dev:server'
+# rails-static-server-assets: sh -c 'yarn run build:dev'
