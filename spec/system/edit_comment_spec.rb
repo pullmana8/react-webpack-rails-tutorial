@@ -14,14 +14,14 @@ feature "Edit a comment", existing_comment: true do
 
       scenario "comment is updated" do
         expect(page).to have_css(".comment", text: :edited_name)
-        expect(page).to have_success_message
+#        expect(page).to have_success_message
       end
     end
 
     context "when edit is submitted with blank fields", blank_form_submitted: true do
       scenario "comment is not updated" do
-        expect(page).not_to have_success_message
-        expect(page).to have_failure_message
+#        expect(page).not_to have_success_message
+#        expect(page).to have_failure_message
         expect(page).not_to have_css(".comment", text: "")
       end
     end
