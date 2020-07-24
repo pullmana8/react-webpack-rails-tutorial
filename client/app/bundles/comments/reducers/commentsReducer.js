@@ -51,9 +51,9 @@ export default function commentsReducer($$state = $$initialState, action = null)
             ['$$comments'],
             $$comments => {
               const index = $$comments.findIndex(com => com.get('id') === comment.id);
-              return index === -1 ?
-                $$comments.unshift(Immutable.fromJS(comment)) :
-                $$comments.set({ index, value: Immutable.fromJS(comment) });
+              return index === -1
+                ? $$comments.unshift(Immutable.fromJS(comment))
+                : $$comments.set({ index, value: Immutable.fromJS(comment) });
             },
           )
           .merge({

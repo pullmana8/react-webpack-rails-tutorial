@@ -237,7 +237,7 @@ class CommentForm extends BaseComponent {
       <div>
         <hr />
         <Form inline className="commentForm" onSubmit={this.handleSubmit}>
-          <FormGroup controlId="formInlineName" >
+          <FormGroup controlId="formInlineName">
             <ControlLabel>
               {formatMessage(defaultMessages.inputNameLabel)}
             </ControlLabel>
@@ -291,7 +291,14 @@ class CommentForm extends BaseComponent {
     const errorData = error.response && error.response.data;
 
     const errorElements = _.transform(errorData, (result, errorText, errorFor) => {
-      result.push(<li key={errorFor}><b>{_.upperFirst(errorFor)}:</b> {errorText}</li>);
+      result.push(<li key={errorFor}>
+        <b>
+          {_.upperFirst(errorFor)}
+          :
+        </b>
+        {' '}
+        {errorText}
+                  </li>);
     }, []);
 
     return (

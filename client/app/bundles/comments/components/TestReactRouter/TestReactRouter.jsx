@@ -8,7 +8,11 @@ export default class TestReactRouter extends BaseComponent {
       <div className="container">
         <h1>React Router is working!</h1>
         <p>
-          Woohoo, we can use <code>react-router</code> here!
+          Woohoo, we can use
+          {' '}
+          <code>react-router</code>
+          {' '}
+          here!
         </p>
       </div>
     );
