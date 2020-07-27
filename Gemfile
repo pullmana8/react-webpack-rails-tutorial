@@ -94,7 +94,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", "~> 3.33"
+  gem "capybara", "~> 3.31"
   gem "capybara-screenshot"
   gem "coveralls", require: false
   gem "database_cleaner"
